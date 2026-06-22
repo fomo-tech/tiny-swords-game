@@ -1,0 +1,215 @@
+[CMD] Time: 2026-06-21T15:42:49.847Z | Socket: p1 | Cmd: move | Data: {"unitIds":["unit_70"],"targetX":700,"targetY":700}
+  -> Unit unit_70 status: owner_match: true (unit: p1, socket: p1) | path_len: 11 | start: (170.0, 310.0) -> target: (700.0, 700.0)
+[CMD] Time: 2026-06-21T15:42:49.848Z | Socket: p1 | Cmd: gather | Data: {"pawnId":"unit_70","resourceId":"res_1"}
+[CMD] Time: 2026-06-21T15:42:49.848Z | Socket: p1 | Cmd: build | Data: {"pawnId":"unit_70","type":"house","x":1000,"y":1000}
+[CMD] Time: 2026-06-21T15:43:02.036Z | Socket: p1 | Cmd: build | Data: {"pawnId":"unit_70","type":"house","x":520,"y":260}
+[CMD] Time: 2026-06-21T15:47:02.964Z | Socket: BLHOIGOUZKvGvew3AAAS | Cmd: move | Data: {"unitIds":["unit_70"],"targetX":650,"targetY":285}
+  -> Unit unit_70 status: owner_match: true (unit: BLHOIGOUZKvGvew3AAAS, socket: BLHOIGOUZKvGvew3AAAS) | path_len: 11 | start: (170.0, 310.0) -> target: (650.0, 285.0)
+[CMD] Time: 2026-06-21T15:47:16.137Z | Socket: BLHOIGOUZKvGvew3AAAS | Cmd: build | Data: {"pawnId":"unit_70","type":"house","x":700,"y":400}
+[CMD] Time: 2026-06-21T16:20:54.046Z | Socket: 2ZtbOgrDyEeq58HzAAAb | Cmd: train | Data: {"buildingId":"build_69","unitType":"pawn"}
+[CMD] Time: 2026-06-21T16:25:15.393Z | Socket: I-F-14seQ4Gy2zLuAAAd | Cmd: move | Data: {"unitIds":["unit_70"],"targetX":600,"targetY":300}
+  -> Unit unit_70 status: owner_match: true (unit: I-F-14seQ4Gy2zLuAAAd, socket: I-F-14seQ4Gy2zLuAAAd) | path_len: 10 | start: (170.0, 310.0) -> target: (600.0, 300.0)
+[CMD] Time: 2026-06-22T03:04:50.979Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_71","resourceId":"res_23"}
+[CMD] Time: 2026-06-22T03:04:53.507Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_71"],"targetX":426,"targetY":264}
+  -> Unit unit_71 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 2 | start: (467.8, 288.0) -> target: (426.0, 264.0)
+[CMD] Time: 2026-06-22T03:04:54.599Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_71"],"targetX":506,"targetY":248}
+  -> Unit unit_71 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 2 | start: (425.8, 288.0) -> target: (506.0, 248.0)
+[CMD] Time: 2026-06-22T03:04:55.224Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_71"],"targetX":596,"targetY":283}
+  -> Unit unit_71 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 4 | start: (440.3, 266.2) -> target: (596.0, 283.0)
+[CMD] Time: 2026-06-22T03:04:55.574Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_71"],"targetX":630,"targetY":358}
+  -> Unit unit_71 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 5 | start: (425.4, 279.5) -> target: (630.0, 358.0)
+[CMD] Time: 2026-06-22T03:04:58.269Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_71","resourceId":"res_13"}
+[CMD] Time: 2026-06-22T03:04:59.974Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_71","resourceId":"res_13"}
+[CMD] Time: 2026-06-22T03:05:00.560Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_71"],"targetX":648,"targetY":358}
+  -> Unit unit_71 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 1 | start: (606.0, 288.0) -> target: (648.0, 358.0)
+[CMD] Time: 2026-06-22T03:05:03.661Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_71","resourceId":"res_13"}
+[CMD] Time: 2026-06-22T03:05:13.423Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_72"],"targetX":249,"targetY":485}
+  -> Unit unit_72 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 3 | start: (250.0, 340.0) -> target: (249.0, 485.0)
+[CMD] Time: 2026-06-22T03:05:18.388Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_72"],"targetX":259,"targetY":483}
+  -> Unit unit_72 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 2 | start: (224.0, 476.9) -> target: (259.0, 483.0)
+[CMD] Time: 2026-06-22T03:05:19.248Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_72"],"targetX":258,"targetY":492}
+  -> Unit unit_72 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 1 | start: (271.9, 479.2) -> target: (258.0, 492.0)
+[CMD] Time: 2026-06-22T03:05:21.567Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_72"],"targetX":257,"targetY":496}
+  -> Unit unit_72 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 1 | start: (285.9, 479.9) -> target: (257.0, 496.0)
+[CMD] Time: 2026-06-22T03:05:24.152Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_72","resourceId":"res_26"}
+[CMD] Time: 2026-06-22T03:05:24.982Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_72","resourceId":"res_26"}
+[CMD] Time: 2026-06-22T03:05:25.599Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_72","resourceId":"res_26"}
+[CMD] Time: 2026-06-22T03:05:26.174Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_72","resourceId":"res_24"}
+[CMD] Time: 2026-06-22T03:05:26.768Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_72","resourceId":"res_26"}
+[CMD] Time: 2026-06-22T03:05:27.035Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_72","resourceId":"res_26"}
+[CMD] Time: 2026-06-22T03:05:27.350Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_72","resourceId":"res_26"}
+[CMD] Time: 2026-06-22T03:05:27.590Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_72","resourceId":"res_26"}
+[CMD] Time: 2026-06-22T03:05:27.776Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_72"],"targetX":215,"targetY":587}
+  -> Unit unit_72 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 2 | start: (224.0, 547.8) -> target: (215.0, 587.0)
+[CMD] Time: 2026-06-22T03:05:28.341Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_72"],"targetX":617,"targetY":517}
+  -> Unit unit_72 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 7 | start: (224.0, 579.8) -> target: (617.0, 517.0)
+[CMD] Time: 2026-06-22T03:05:28.705Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_72"],"targetX":360,"targetY":463}
+  -> Unit unit_72 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 2 | start: (224.0, 599.8) -> target: (360.0, 463.0)
+[CMD] Time: 2026-06-22T03:05:33.349Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_72","resourceId":"res_37"}
+[CMD] Time: 2026-06-22T03:07:34.891Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_70"],"targetX":580,"targetY":319}
+  -> Unit unit_70 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 10 | start: (170.0, 310.0) -> target: (580.0, 319.0)
+[CMD] Time: 2026-06-22T03:07:36.718Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: gather | Data: {"pawnId":"unit_70","resourceId":"res_63"}
+[CMD] Time: 2026-06-22T03:07:37.341Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_70"],"targetX":585,"targetY":320}
+  -> Unit unit_70 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 10 | start: (160.0, 200.0) -> target: (585.0, 320.0)
+[CMD] Time: 2026-06-22T03:07:37.753Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_70"],"targetX":585,"targetY":326}
+  -> Unit unit_70 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 10 | start: (160.0, 220.0) -> target: (585.0, 326.0)
+[CMD] Time: 2026-06-22T03:07:37.958Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["unit_70"],"targetX":585,"targetY":326}
+  -> Unit unit_70 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB) | path_len: 10 | start: (160.0, 214.0) -> target: (585.0, 326.0)
+[CMD] Time: 2026-06-22T03:07:51.853Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["build_69"],"targetX":771,"targetY":391}
+  -> Unit build_69 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB)
+[CMD] Time: 2026-06-22T03:07:52.220Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["build_69"],"targetX":579,"targetY":227}
+  -> Unit build_69 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB)
+[CMD] Time: 2026-06-22T03:07:52.430Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["build_69"],"targetX":579,"targetY":227}
+  -> Unit build_69 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB)
+[CMD] Time: 2026-06-22T03:07:58.258Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: build | Data: {"pawnId":"unit_70","type":"barracks","x":470,"y":141}
+[CMD] Time: 2026-06-22T03:08:09.437Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["build_83"],"targetX":1049,"targetY":514}
+  -> Unit build_83 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB)
+[CMD] Time: 2026-06-22T03:08:09.976Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["build_83"],"targetX":707,"targetY":652}
+  -> Unit build_83 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB)
+[CMD] Time: 2026-06-22T03:08:10.165Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["build_83"],"targetX":643,"targetY":608}
+  -> Unit build_83 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB)
+[CMD] Time: 2026-06-22T03:08:10.352Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["build_83"],"targetX":639,"targetY":603}
+  -> Unit build_83 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB)
+[CMD] Time: 2026-06-22T03:08:11.884Z | Socket: lD1V0QKJXAb7Z_nBAAAB | Cmd: move | Data: {"unitIds":["build_83"],"targetX":681,"targetY":632}
+  -> Unit build_83 status: owner_match: true (unit: lD1V0QKJXAb7Z_nBAAAB, socket: lD1V0QKJXAb7Z_nBAAAB)
+[CMD] Time: 2026-06-22T03:17:25.676Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: gather | Data: {"pawnId":"unit_54","resourceId":"res_3"}
+[CMD] Time: 2026-06-22T03:17:30.915Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: move | Data: {"unitIds":["unit_53"],"targetX":262,"targetY":487}
+  -> Unit unit_53 status: owner_match: true (unit: 2EqCUIo1_yHjw3GrAAAD, socket: 2EqCUIo1_yHjw3GrAAAD) | path_len: 4 | start: (330.0, 310.0) -> target: (262.0, 487.0)
+[CMD] Time: 2026-06-22T03:17:34.867Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: move | Data: {"unitIds":["unit_52"],"targetX":777,"targetY":576}
+  -> Unit unit_52 status: owner_match: true (unit: 2EqCUIo1_yHjw3GrAAAD, socket: 2EqCUIo1_yHjw3GrAAAD) | path_len: 15 | start: (170.0, 310.0) -> target: (777.0, 576.0)
+[CMD] Time: 2026-06-22T03:17:36.563Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: gather | Data: {"pawnId":"unit_52","resourceId":"res_45"}
+[CMD] Time: 2026-06-22T03:17:39.411Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: move | Data: {"unitIds":["unit_52"],"targetX":782,"targetY":579}
+  -> Unit unit_52 status: owner_match: true (unit: 2EqCUIo1_yHjw3GrAAAD, socket: 2EqCUIo1_yHjw3GrAAAD) | path_len: 12 | start: (116.6, 434.1) -> target: (782.0, 579.0)
+[CMD] Time: 2026-06-22T03:18:06.187Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: move | Data: {"unitIds":["unit_52"],"targetX":976,"targetY":993}
+  -> Unit unit_52 status: owner_match: true (unit: 2EqCUIo1_yHjw3GrAAAD, socket: 2EqCUIo1_yHjw3GrAAAD) | path_len: 0 | start: (797.6, 608.1) -> target: (976.0, 993.0)
+[CMD] Time: 2026-06-22T03:18:10.034Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: move | Data: {"unitIds":["unit_52"],"targetX":1470,"targetY":1410}
+  -> Unit unit_52 status: owner_match: true (unit: 2EqCUIo1_yHjw3GrAAAD, socket: 2EqCUIo1_yHjw3GrAAAD) | path_len: 24 | start: (797.6, 608.1) -> target: (1470.0, 1410.0)
+[CMD] Time: 2026-06-22T03:18:22.792Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: gather | Data: {"pawnId":"unit_52","resourceId":"res_11"}
+[CMD] Time: 2026-06-22T03:18:23.259Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: attack | Data: {"unitIds":["unit_52"],"targetId":"unit_57"}
+[CMD] Time: 2026-06-22T03:18:23.609Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: attack | Data: {"unitIds":["unit_52"],"targetId":"unit_55"}
+[CMD] Time: 2026-06-22T03:18:23.933Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: attack | Data: {"unitIds":["unit_52"],"targetId":"unit_57"}
+[CMD] Time: 2026-06-22T03:18:24.152Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: attack | Data: {"unitIds":["unit_52"],"targetId":"unit_57"}
+[CMD] Time: 2026-06-22T03:18:24.295Z | Socket: 2EqCUIo1_yHjw3GrAAAD | Cmd: attack | Data: {"unitIds":["unit_52"],"targetId":"unit_57"}
+[CMD] Time: 2026-06-22T03:23:42.150Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":265,"targetY":482}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 2 | start: (350.0, 440.0) -> target: (265.0, 482.0)
+[CMD] Time: 2026-06-22T03:23:48.351Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: gather | Data: {"pawnId":"unit_176","resourceId":"res_4"}
+[CMD] Time: 2026-06-22T03:24:05.391Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":258,"targetY":493}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 2 | start: (224.0, 544.0) -> target: (258.0, 493.0)
+[CMD] Time: 2026-06-22T03:24:08.235Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":720,"targetY":685}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 8 | start: (286.0, 544.0) -> target: (720.0, 685.0)
+[CMD] Time: 2026-06-22T03:24:08.521Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":1032,"targetY":761}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 15 | start: (296.0, 553.7) -> target: (1032.0, 761.0)
+[CMD] Time: 2026-06-22T03:25:04.917Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":2676,"targetY":2698}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 0 | start: (1056.0, 733.9) -> target: (2676.0, 2698.0)
+[CMD] Time: 2026-06-22T03:25:05.095Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":2601,"targetY":2622}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 0 | start: (1056.0, 733.9) -> target: (2601.0, 2622.0)
+[CMD] Time: 2026-06-22T03:25:05.770Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: gather | Data: {"pawnId":"unit_176","resourceId":"res_33"}
+[CMD] Time: 2026-06-22T03:25:06.804Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: gather | Data: {"pawnId":"unit_176","resourceId":"res_38"}
+[CMD] Time: 2026-06-22T03:25:06.973Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":2350,"targetY":2440}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 0 | start: (1056.0, 733.9) -> target: (2350.0, 2440.0)
+[CMD] Time: 2026-06-22T03:25:07.344Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":2538,"targetY":2300}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 0 | start: (1056.0, 733.9) -> target: (2538.0, 2300.0)
+[CMD] Time: 2026-06-22T03:25:07.633Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":2585,"targetY":2254}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 0 | start: (1056.0, 733.9) -> target: (2585.0, 2254.0)
+[CMD] Time: 2026-06-22T03:25:08.032Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":2687,"targetY":2148}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 0 | start: (1056.0, 733.9) -> target: (2687.0, 2148.0)
+[CMD] Time: 2026-06-22T03:25:13.489Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: move | Data: {"unitIds":["unit_176"],"targetX":2011,"targetY":1973}
+  -> Unit unit_176 status: owner_match: true (unit: hdm5yKtsrpuIU5fbAAAD, socket: hdm5yKtsrpuIU5fbAAAD) | path_len: 0 | start: (1056.0, 733.9) -> target: (2011.0, 1973.0)
+[CMD] Time: 2026-06-22T03:25:15.965Z | Socket: hdm5yKtsrpuIU5fbAAAD | Cmd: build | Data: {"pawnId":"unit_176","type":"archery","x":1997,"y":1947}
+[CMD] Time: 2026-06-22T03:40:43.336Z | Socket: TJJXttb1hDIGrSEZAAAD | Cmd: move | Data: {"unitIds":["res_5","build_162"],"targetX":368,"targetY":495}
+  -> Unit res_5 status: owner_match: false (unit: undefined, socket: TJJXttb1hDIGrSEZAAAD)
+  -> Unit build_162 status: owner_match: true (unit: TJJXttb1hDIGrSEZAAAD, socket: TJJXttb1hDIGrSEZAAAD)
+[CMD] Time: 2026-06-22T03:40:55.932Z | Socket: TJJXttb1hDIGrSEZAAAD | Cmd: move | Data: {"unitIds":["res_7","res_8","build_162"],"targetX":455,"targetY":233}
+  -> Unit res_7 status: owner_match: false (unit: undefined, socket: TJJXttb1hDIGrSEZAAAD)
+  -> Unit res_8 status: owner_match: false (unit: undefined, socket: TJJXttb1hDIGrSEZAAAD)
+  -> Unit build_162 status: owner_match: true (unit: TJJXttb1hDIGrSEZAAAD, socket: TJJXttb1hDIGrSEZAAAD)
+[CMD] Time: 2026-06-22T03:40:59.478Z | Socket: TJJXttb1hDIGrSEZAAAD | Cmd: move | Data: {"unitIds":["unit_164"],"targetX":739,"targetY":459}
+  -> Unit unit_164 status: owner_match: true (unit: TJJXttb1hDIGrSEZAAAD, socket: TJJXttb1hDIGrSEZAAAD) | path_len: 6 | start: (430.0, 410.0) -> target: (739.0, 459.0)
+[CMD] Time: 2026-06-22T03:41:01.871Z | Socket: TJJXttb1hDIGrSEZAAAD | Cmd: move | Data: {"unitIds":["build_162"],"targetX":480,"targetY":465}
+  -> Unit build_162 status: owner_match: true (unit: TJJXttb1hDIGrSEZAAAD, socket: TJJXttb1hDIGrSEZAAAD)
+[CMD] Time: 2026-06-22T03:41:09.632Z | Socket: TJJXttb1hDIGrSEZAAAD | Cmd: move | Data: {"unitIds":["unit_164"],"targetX":965,"targetY":506}
+  -> Unit unit_164 status: owner_match: true (unit: TJJXttb1hDIGrSEZAAAD, socket: TJJXttb1hDIGrSEZAAAD) | path_len: 5 | start: (733.7, 480.0) -> target: (965.0, 506.0)
+[CMD] Time: 2026-06-22T03:41:10.987Z | Socket: TJJXttb1hDIGrSEZAAAD | Cmd: gather | Data: {"pawnId":"unit_164","resourceId":"res_158"}
+[CMD] Time: 2026-06-22T03:41:12.195Z | Socket: TJJXttb1hDIGrSEZAAAD | Cmd: gather | Data: {"pawnId":"unit_164","resourceId":"res_158"}
+[CMD] Time: 2026-06-22T03:41:13.820Z | Socket: TJJXttb1hDIGrSEZAAAD | Cmd: gather | Data: {"pawnId":"unit_164","resourceId":"res_158"}
+[CMD] Time: 2026-06-22T03:42:58.711Z | Socket: dTqi2ZjB1Rc0MUK-AAAH | Cmd: gather | Data: {"pawnId":"unit_197","resourceId":"res_160"}
+[CMD] Time: 2026-06-22T03:44:17.443Z | Socket: dTqi2ZjB1Rc0MUK-AAAH | Cmd: gather | Data: {"pawnId":"unit_197","resourceId":"res_160"}
+[CMD] Time: 2026-06-22T03:44:34.062Z | Socket: bDCctibpw6s3HT0lAAAJ | Cmd: move | Data: {"unitIds":["unit_165"],"targetX":741,"targetY":821}
+  -> Unit unit_165 status: owner_match: true (unit: bDCctibpw6s3HT0lAAAJ, socket: bDCctibpw6s3HT0lAAAJ) | path_len: 0 | start: (350.0, 440.0) -> target: (741.0, 821.0)
+[CMD] Time: 2026-06-22T03:44:35.718Z | Socket: bDCctibpw6s3HT0lAAAJ | Cmd: move | Data: {"unitIds":["unit_165"],"targetX":669,"targetY":809}
+  -> Unit unit_165 status: owner_match: true (unit: bDCctibpw6s3HT0lAAAJ, socket: bDCctibpw6s3HT0lAAAJ) | path_len: 7 | start: (350.0, 440.0) -> target: (669.0, 809.0)
+[CMD] Time: 2026-06-22T03:45:38.221Z | Socket: bDCctibpw6s3HT0lAAAJ | Cmd: train | Data: {"buildingId":"build_162","unitType":"pawn"}
+[CMD] Time: 2026-06-22T03:45:39.517Z | Socket: bDCctibpw6s3HT0lAAAJ | Cmd: move | Data: {"unitIds":["build_162"],"targetX":758,"targetY":398}
+  -> Unit build_162 status: owner_match: true (unit: bDCctibpw6s3HT0lAAAJ, socket: bDCctibpw6s3HT0lAAAJ)
+[CMD] Time: 2026-06-22T03:45:41.958Z | Socket: bDCctibpw6s3HT0lAAAJ | Cmd: train | Data: {"buildingId":"build_162","unitType":"pawn"}
+[CMD] Time: 2026-06-22T03:45:51.030Z | Socket: bDCctibpw6s3HT0lAAAJ | Cmd: move | Data: {"unitIds":["unit_166","unit_167"],"targetX":461,"targetY":229}
+  -> Unit unit_166 status: owner_match: true (unit: bDCctibpw6s3HT0lAAAJ, socket: bDCctibpw6s3HT0lAAAJ) | path_len: 6 | start: (324.0, 444.0) -> target: (461.0, 229.0)
+  -> Unit unit_167 status: owner_match: true (unit: bDCctibpw6s3HT0lAAAJ, socket: bDCctibpw6s3HT0lAAAJ) | path_len: 6 | start: (324.0, 444.0) -> target: (461.0, 229.0)
+[CMD] Time: 2026-06-22T03:48:38.588Z | Socket: bDCctibpw6s3HT0lAAAJ | Cmd: move | Data: {"unitIds":["unit_165"],"targetX":521,"targetY":1002}
+  -> Unit unit_165 status: owner_match: true (unit: bDCctibpw6s3HT0lAAAJ, socket: bDCctibpw6s3HT0lAAAJ) | path_len: 3 | start: (607.9, 797.9) -> target: (521.0, 1002.0)
+[CMD] Time: 2026-06-22T03:57:54.416Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["res_124"],"targetX":936,"targetY":565}
+  -> Unit res_124 status: owner_match: false (unit: undefined, socket: o-6fbQgLjG7n399XAAAF)
+[CMD] Time: 2026-06-22T03:57:54.836Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["res_124"],"targetX":912,"targetY":583}
+  -> Unit res_124 status: owner_match: false (unit: undefined, socket: o-6fbQgLjG7n399XAAAF)
+[CMD] Time: 2026-06-22T03:57:58.164Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: gather | Data: {"pawnId":"unit_169","resourceId":"res_124"}
+[CMD] Time: 2026-06-22T03:58:02.612Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":740,"targetY":823}
+  -> Unit unit_167 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 0 | start: (270.0, 410.0) -> target: (740.0, 823.0)
+[CMD] Time: 2026-06-22T03:58:04.957Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":476,"targetY":576}
+  -> Unit unit_167 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 15 | start: (270.0, 410.0) -> target: (476.0, 576.0)
+[CMD] Time: 2026-06-22T03:58:12.012Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":136,"targetY":486}
+  -> Unit unit_167 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 2 | start: (96.0, 399.9) -> target: (136.0, 486.0)
+[CMD] Time: 2026-06-22T03:58:13.644Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":260,"targetY":487}
+  -> Unit unit_167 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 8 | start: (96.0, 477.9) -> target: (260.0, 487.0)
+[CMD] Time: 2026-06-22T03:58:14.572Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":200,"targetY":475}
+  -> Unit unit_167 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 7 | start: (96.0, 425.9) -> target: (200.0, 475.0)
+[CMD] Time: 2026-06-22T03:58:15.204Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":202,"targetY":485}
+  -> Unit unit_167 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 7 | start: (96.0, 389.9) -> target: (202.0, 485.0)
+[CMD] Time: 2026-06-22T03:58:15.516Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":208,"targetY":491}
+  -> Unit unit_167 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 7 | start: (96.0, 407.9) -> target: (208.0, 491.0)
+[CMD] Time: 2026-06-22T03:58:15.979Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":210,"targetY":497}
+  -> Unit unit_167 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 7 | start: (96.0, 393.9) -> target: (210.0, 497.0)
+[CMD] Time: 2026-06-22T03:58:20.740Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":263,"targetY":489}
+  -> Unit unit_167 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 3 | start: (222.0, 290.0) -> target: (263.0, 489.0)
+[CMD] Time: 2026-06-22T03:58:39.768Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_168"],"targetX":747,"targetY":460}
+  -> Unit unit_168 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 6 | start: (430.0, 410.0) -> target: (747.0, 460.0)
+[CMD] Time: 2026-06-22T03:58:42.635Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_168"],"targetX":757,"targetY":460}
+  -> Unit unit_168 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 4 | start: (543.7, 479.9) -> target: (757.0, 460.0)
+[CMD] Time: 2026-06-22T03:58:43.285Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_168"],"targetX":764,"targetY":464}
+  -> Unit unit_168 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 3 | start: (579.7, 480.0) -> target: (764.0, 464.0)
+[CMD] Time: 2026-06-22T03:58:44.056Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: move | Data: {"unitIds":["unit_168"],"targetX":765,"targetY":467}
+  -> Unit unit_168 status: owner_match: true (unit: o-6fbQgLjG7n399XAAAF, socket: o-6fbQgLjG7n399XAAAF) | path_len: 3 | start: (621.7, 480.0) -> target: (765.0, 467.0)
+[CMD] Time: 2026-06-22T03:58:48.835Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: gather | Data: {"pawnId":"unit_168","resourceId":"res_30"}
+[CMD] Time: 2026-06-22T03:58:53.323Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: gather | Data: {"pawnId":"unit_167","resourceId":"res_4"}
+[CMD] Time: 2026-06-22T03:58:55.044Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: gather | Data: {"pawnId":"unit_167","resourceId":"res_3"}
+[CMD] Time: 2026-06-22T03:58:56.813Z | Socket: o-6fbQgLjG7n399XAAAF | Cmd: gather | Data: {"pawnId":"unit_167","resourceId":"res_9"}
+[CMD] Time: 2026-06-22T04:19:10.919Z | Socket: gEVXiSdv9FSS1RoSAAAF | Cmd: move | Data: {"unitIds":["unit_169"],"targetX":258,"targetY":487}
+  -> Unit unit_169 status: owner_match: true (unit: gEVXiSdv9FSS1RoSAAAF, socket: gEVXiSdv9FSS1RoSAAAF) | path_len: 2 | start: (350.0, 440.0) -> target: (258.0, 487.0)
+[CMD] Time: 2026-06-22T04:19:12.790Z | Socket: gEVXiSdv9FSS1RoSAAAF | Cmd: move | Data: {"unitIds":["unit_169"],"targetX":275,"targetY":480}
+  -> Unit unit_169 status: owner_match: true (unit: gEVXiSdv9FSS1RoSAAAF, socket: gEVXiSdv9FSS1RoSAAAF) | path_len: 1 | start: (291.9, 416.1) -> target: (275.0, 480.0)
+[CMD] Time: 2026-06-22T04:19:13.495Z | Socket: gEVXiSdv9FSS1RoSAAAF | Cmd: move | Data: {"unitIds":["unit_169"],"targetX":276,"targetY":492}
+  -> Unit unit_169 status: owner_match: true (unit: gEVXiSdv9FSS1RoSAAAF, socket: gEVXiSdv9FSS1RoSAAAF) | path_len: 1 | start: (291.9, 416.1) -> target: (276.0, 492.0)
+[CMD] Time: 2026-06-22T04:19:16.670Z | Socket: gEVXiSdv9FSS1RoSAAAF | Cmd: move | Data: {"unitIds":["unit_167","unit_169"],"targetX":138,"targetY":475}
+  -> Unit unit_167 status: owner_match: true (unit: gEVXiSdv9FSS1RoSAAAF, socket: gEVXiSdv9FSS1RoSAAAF) | path_len: 10 | start: (270.0, 410.0) -> target: (138.0, 475.0)
+  -> Unit unit_169 status: owner_match: true (unit: gEVXiSdv9FSS1RoSAAAF, socket: gEVXiSdv9FSS1RoSAAAF) | path_len: 10 | start: (291.9, 416.1) -> target: (138.0, 475.0)
+[CMD] Time: 2026-06-22T04:19:19.374Z | Socket: gEVXiSdv9FSS1RoSAAAF | Cmd: gather | Data: {"pawnId":"unit_167","resourceId":"res_10"}
+[CMD] Time: 2026-06-22T04:19:19.376Z | Socket: gEVXiSdv9FSS1RoSAAAF | Cmd: gather | Data: {"pawnId":"unit_169","resourceId":"res_10"}
+[CMD] Time: 2026-06-22T04:19:35.869Z | Socket: gEVXiSdv9FSS1RoSAAAF | Cmd: gather | Data: {"pawnId":"unit_168","resourceId":"res_140"}
+[CMD] Time: 2026-06-22T04:19:43.871Z | Socket: gEVXiSdv9FSS1RoSAAAF | Cmd: move | Data: {"unitIds":["unit_168"],"targetX":973,"targetY":772}
+  -> Unit unit_168 status: owner_match: true (unit: gEVXiSdv9FSS1RoSAAAF, socket: gEVXiSdv9FSS1RoSAAAF) | path_len: 0 | start: (786.3, 608.0) -> target: (973.0, 772.0)
+[CMD] Time: 2026-06-22T04:19:45.549Z | Socket: gEVXiSdv9FSS1RoSAAAF | Cmd: gather | Data: {"pawnId":"unit_168","resourceId":"res_140"}
+[CMD] Time: 2026-06-22T04:19:59.582Z | Socket: gEVXiSdv9FSS1RoSAAAF | Cmd: build | Data: {"pawnId":"unit_168","type":"tower","x":1784,"y":782}
+[CMD] Time: 2026-06-22T05:51:57.397Z | Socket: rbDzU_qw3Zmz3UyEAAAH | Cmd: move | Data: {"unitIds":["unit_168"],"targetX":751,"targetY":458}
+  -> Unit unit_168 status: owner_match: true (unit: rbDzU_qw3Zmz3UyEAAAH, socket: rbDzU_qw3Zmz3UyEAAAH) | path_len: 6 | start: (430.0, 410.0) -> target: (751.0, 458.0)
+[CMD] Time: 2026-06-22T05:51:59.948Z | Socket: rbDzU_qw3Zmz3UyEAAAH | Cmd: move | Data: {"unitIds":["unit_168"],"targetX":903,"targetY":424}
+  -> Unit unit_168 status: owner_match: true (unit: rbDzU_qw3Zmz3UyEAAAH, socket: rbDzU_qw3Zmz3UyEAAAH) | path_len: 7 | start: (525.7, 479.3) -> target: (903.0, 424.0)
+[CMD] Time: 2026-06-22T05:53:40.586Z | Socket: rbDzU_qw3Zmz3UyEAAAH | Cmd: move | Data: {"unitIds":["unit_168"],"targetX":3116,"targetY":3625}
+  -> Unit unit_168 status: owner_match: true (unit: rbDzU_qw3Zmz3UyEAAAH, socket: rbDzU_qw3Zmz3UyEAAAH) | path_len: 58 | start: (924.5, 416.0) -> target: (3116.0, 3625.0)
+[CMD] Time: 2026-06-22T05:53:52.151Z | Socket: rbDzU_qw3Zmz3UyEAAAH | Cmd: gather | Data: {"pawnId":"unit_169","resourceId":"res_9"}
+[CMD] Time: 2026-06-22T05:53:57.880Z | Socket: rbDzU_qw3Zmz3UyEAAAH | Cmd: gather | Data: {"pawnId":"unit_167","resourceId":"res_8"}
+[CMD] Time: 2026-06-22T05:54:01.598Z | Socket: rbDzU_qw3Zmz3UyEAAAH | Cmd: gather | Data: {"pawnId":"unit_167","resourceId":"res_9"}
+[CMD] Time: 2026-06-22T05:54:04.099Z | Socket: rbDzU_qw3Zmz3UyEAAAH | Cmd: gather | Data: {"pawnId":"unit_167","resourceId":"res_7"}
+[CMD] Time: 2026-06-22T05:54:14.203Z | Socket: rbDzU_qw3Zmz3UyEAAAH | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":740,"targetY":831}
+  -> Unit unit_167 status: owner_match: true (unit: rbDzU_qw3Zmz3UyEAAAH, socket: rbDzU_qw3Zmz3UyEAAAH) | path_len: 0 | start: (438.0, 98.6) -> target: (740.0, 831.0)
+[CMD] Time: 2026-06-22T05:54:14.598Z | Socket: rbDzU_qw3Zmz3UyEAAAH | Cmd: move | Data: {"unitIds":["unit_167"],"targetX":742,"targetY":820}
+  -> Unit unit_167 status: owner_match: true (unit: rbDzU_qw3Zmz3UyEAAAH, socket: rbDzU_qw3Zmz3UyEAAAH) | path_len: 0 | start: (438.0, 98.6) -> target: (742.0, 820.0)
+[CMD] Time: 2026-06-22T05:54:19.351Z | Socket: rbDzU_qw3Zmz3UyEAAAH | Cmd: gather | Data: {"pawnId":"unit_167","resourceId":"res_6"}
