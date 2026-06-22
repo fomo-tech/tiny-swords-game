@@ -109,6 +109,10 @@ export class GameRoom {
 
   startGame() {
     if (this.gameStarted) return;
+    if (this.players.filter(p => !p.isBot).length === 1 && this.players.length === 1) {
+      this.addBot();
+    }
+
     this.gameStarted = true;
     
     // Initialize map grid
@@ -132,13 +136,26 @@ export class GameRoom {
       this.spawnUnit('pawn', spawn.x + 80, spawn.y + 60, p.id);
       this.spawnUnit('pawn', spawn.x, spawn.y + 90, p.id);
 
+      if (p.isBot) {
+        const barracksId = this.spawnBuilding('barracks', spawn.x - 180, spawn.y + 120, p.id, true);
+        const towerId = this.spawnBuilding('tower', spawn.x + 180, spawn.y + 80, p.id, true);
+        this.spawnUnit('warrior', spawn.x - 110, spawn.y + 170, p.id);
+        this.spawnUnit('warrior', spawn.x - 70, spawn.y + 195, p.id);
+        this.spawnUnit('archer', spawn.x - 130, spawn.y + 215, p.id);
+        this.spawnUnit('lancer', spawn.x - 90, spawn.y + 235, p.id);
+        if (!barracksId || !towerId) {
+          // Spawned entities above are best-effort; blocked defensive buildings
+          // should not prevent the skirmish enemy from existing.
+        }
+      }
+
       // Reset resources
       p.resources = {
-        food: 200,
-        wood: 200,
-        gold: 200,
-        population: 3,
-        maxPopulation: 5
+        food: p.isBot ? 500 : 200,
+        wood: p.isBot ? 600 : 200,
+        gold: p.isBot ? 450 : 200,
+        population: p.isBot ? 7 : 3,
+        maxPopulation: p.isBot ? 12 : 5
       };
     });
 
@@ -152,7 +169,7 @@ export class GameRoom {
       this.io.to(this.roomId).emit('chatMessage', {
         sender: 'Hệ thống',
         color: 'yellow',
-        message: 'Trận đấu bắt đầu! Bot AI xuất hiện ở góc dưới bên phải bản đồ (tọa độ 1800, 1800). Hãy sử dụng phím S và D để cuộn camera xuống dưới tìm Bot!'
+        message: 'Trận đấu bắt đầu! Nếu chơi một mình, game tự thêm Bot Skirmish. Bot có quân tấn công sớm; hãy xây tháp và kéo quân phòng thủ!'
       });
     }, 1000);
 
@@ -533,6 +550,22 @@ export class GameRoom {
       }
     }
 
+    else if (command === 'build_existing') {
+      const { pawnId, buildingId } = data;
+      const pawn = this.entities[pawnId];
+      const building = this.entities[buildingId];
+      if (pawn && pawn.ownerId === socketId && pawn.type === 'pawn' && building) {
+        if (building.status === 'under_construction' || building.hp < building.maxHp) {
+          pawn.task = {
+            type: 'building',
+            targetId: buildingId
+          };
+          pawn.state = 'run';
+          pawn.waypoints = this.pathfinding.findPath(pawn.x, pawn.y, building.x, building.y);
+        }
+      }
+    }
+
     else if (command === 'train') {
       const { buildingId, unitType } = data;
       const building = this.entities[buildingId];
@@ -675,13 +708,13 @@ export class GameRoom {
             entity.trainingQueue.shift();
           }
         }
-        // Handle Defensive Tower shooting
-        if (entity.type === 'tower' && entity.status === 'complete') {
+        // Handle Defensive buildings shooting
+        if ((entity.type === 'tower' || entity.type === 'castle') && entity.status === 'complete') {
           if (!entity.shootCooldown) entity.shootCooldown = 0;
           if (entity.shootCooldown > 0) {
             entity.shootCooldown--;
           } else {
-            const range = 250;
+            const range = entity.type === 'castle' ? 310 : 250;
             // Find nearest enemy unit or building
             const enemies = Object.values(this.entities).filter(
               e => e.ownerId && e.ownerId !== entity.ownerId && e.hp > 0 && 
@@ -700,13 +733,13 @@ export class GameRoom {
 
             if (target) {
               // Shoot!
-              target.hp -= 12; // Tower damage
-              entity.shootCooldown = 45; // 1.5s cooldown
+              target.hp -= entity.type === 'castle' ? 9 : 12;
+              entity.shootCooldown = entity.type === 'castle' ? 55 : 45;
               
               // Broadcast projectile shot
               this.io.to(this.roomId).emit('projectileShot', {
                 startX: entity.x,
-                startY: entity.y - 45, // Tower offset
+                startY: entity.y - (entity.type === 'castle' ? 70 : 45),
                 endX: target.x,
                 endY: target.y
               });
@@ -767,6 +800,10 @@ export class GameRoom {
           entity.attackCooldown--;
         }
 
+        if (this.tickCount % 20 === 0) {
+          this.tryAutoAcquireTarget(entity);
+        }
+
         // Process Move along waypoints
         if (entity.waypoints.length > 0) {
           const target = entity.waypoints[0];
@@ -815,7 +852,8 @@ export class GameRoom {
     else if (entity.task.type === 'harvesting') {
       if (entity.task.delivering) {
         const castle = this.findNearestCastle(entity.x, entity.y, entity.ownerId);
-        if (castle && Math.hypot(castle.x - entity.x, castle.y - entity.y) <= 120) {
+        const dropoff = castle ? this.getDropoffPoint(castle, entity.x, entity.y) : null;
+        if (castle && this.isAtDropoff(entity, castle)) {
           // Unload
           const player = this.players.find(p => p.id === entity.ownerId);
           if (player) {
@@ -854,9 +892,12 @@ export class GameRoom {
             }
           }
         } else {
-          // Keep moving to castle if path got cleared/empty
-          if (castle) {
-            entity.waypoints = this.pathfinding.findPath(entity.x, entity.y, castle.x, castle.y);
+          // Keep moving to a walkable dropoff tile beside the castle if path got cleared/empty
+          if (dropoff) {
+            if (!entity.waypoints || entity.waypoints.length === 0) {
+              const path = this.pathfinding.findPath(entity.x, entity.y, dropoff.x, dropoff.y);
+              entity.waypoints = path.length > 1 ? path.slice(1) : path;
+            }
             entity.state = 'run';
           } else {
             entity.task = { type: 'idle' };
@@ -869,9 +910,9 @@ export class GameRoom {
         if (target && target.amount > 0) {
           const dist = Math.hypot(target.x - entity.x, target.y - entity.y);
 
-          if (dist <= 95) {
+          if (dist <= 120) {
             // Close enough to harvest
-            entity.state = entity.task.resourceType === 'tree' ? 'chop' : (entity.task.resourceType === 'gold_ore' ? 'mine' : 'chop'); // 'chop' animation for sheep as well
+            entity.state = entity.task.resourceType === 'tree' ? 'chop' : (entity.task.resourceType === 'gold_ore' ? 'mine' : 'hunt'); // 'chop' animation for sheep as well
 
             // Mine tick (every 30 frames ~ 1s)
             if (this.tickCount % 30 === 0) {
@@ -889,8 +930,10 @@ export class GameRoom {
               // Bag full: go back to Castle
               if (entity.task.carriedAmount >= entity.task.maxCarried) {
                 const castle = this.findNearestCastle(entity.x, entity.y, entity.ownerId);
-                if (castle) {
-                  entity.waypoints = this.pathfinding.findPath(entity.x, entity.y, castle.x, castle.y);
+                const dropoff = castle ? this.getDropoffPoint(castle, entity.x, entity.y) : null;
+                if (dropoff) {
+                  const path = this.pathfinding.findPath(entity.x, entity.y, dropoff.x, dropoff.y);
+                  entity.waypoints = path.length > 1 ? path.slice(1) : path;
                   entity.state = 'run';
                   entity.task.delivering = true;
                 } else {
@@ -908,8 +951,10 @@ export class GameRoom {
           // Target resource depleted, try to unload current resource
           if (entity.task.carriedAmount > 0) {
             const castle = this.findNearestCastle(entity.x, entity.y, entity.ownerId);
-            if (castle) {
-              entity.waypoints = this.pathfinding.findPath(entity.x, entity.y, castle.x, castle.y);
+            const dropoff = castle ? this.getDropoffPoint(castle, entity.x, entity.y) : null;
+            if (dropoff) {
+              const path = this.pathfinding.findPath(entity.x, entity.y, dropoff.x, dropoff.y);
+              entity.waypoints = path.length > 1 ? path.slice(1) : path;
               entity.state = 'run';
               entity.task.delivering = true;
             } else {
@@ -928,10 +973,10 @@ export class GameRoom {
     // 4. Building task
     else if (entity.task.type === 'building') {
       const building = this.entities[entity.task.targetId];
-      if (building && building.status === 'under_construction') {
+      if (building && (building.status === 'under_construction' || building.hp < building.maxHp)) {
         const dist = Math.hypot(building.x - entity.x, building.y - entity.y);
         const buildSize = building.size || 1;
-        const maxBuildDist = buildSize === 2 ? 140 : 95;
+        const maxBuildDist = buildSize === 2 ? 160 : 120;
         
         if (dist <= maxBuildDist) {
           entity.state = 'build';
@@ -941,16 +986,17 @@ export class GameRoom {
             building.buildProgress = Math.floor((building.hp / building.maxHp) * 100);
 
             if (building.hp >= building.maxHp) {
-              building.status = 'complete';
-              building.buildProgress = 100;
+              if (building.status !== 'complete') {
+                building.status = 'complete';
+                building.buildProgress = 100;
+                // If it was a house, add max Population
+                if (building.type === 'house') {
+                  const player = this.players.find(p => p.id === building.ownerId);
+                  if (player) player.resources.maxPopulation += 5;
+                }
+              }
               entity.task = { type: 'idle' };
               entity.state = 'idle';
-
-              // If it was a house, add max Population
-              if (building.type === 'house') {
-                const player = this.players.find(p => p.id === building.ownerId);
-                if (player) player.resources.maxPopulation += 5;
-              }
             }
           }
         } else {
@@ -968,7 +1014,7 @@ export class GameRoom {
       const target = this.entities[entity.task.targetId];
       if (target && target.hp > 0) {
         const dist = Math.hypot(target.x - entity.x, target.y - entity.y);
-        const maxAttackDist = (entity.type === 'archer' || entity.type === 'monk') ? entity.range : entity.range + 50;
+        const maxAttackDist = (entity.type === 'archer' || entity.type === 'monk') ? entity.range : entity.range + 65;
         
         if (dist <= maxAttackDist) {
           // Stop moving, do attack animation
@@ -1016,6 +1062,41 @@ export class GameRoom {
     }
   }
 
+  tryAutoAcquireTarget(entity) {
+    if (!entity || !['pawn', 'warrior', 'lancer', 'archer', 'monk'].includes(entity.type)) return;
+    if (entity.task?.type === 'attacking' || entity.task?.type === 'building' || entity.task?.delivering) return;
+    if (entity.type === 'pawn' && entity.task?.type === 'harvesting') return;
+    if (entity.type === 'monk') return;
+
+    const isCombatUnit = ['warrior', 'lancer', 'archer'].includes(entity.type);
+    const aggroRange = isCombatUnit
+      ? (entity.type === 'archer' ? 280 : 170)
+      : 85;
+
+    const enemies = Object.values(this.entities).filter(e =>
+      e.ownerId
+      && e.ownerId !== entity.ownerId
+      && e.hp > 0
+      && ['pawn', 'warrior', 'lancer', 'archer', 'monk', 'castle', 'house', 'barracks', 'archery', 'monastery', 'tower'].includes(e.type)
+    );
+
+    let target = null;
+    let minDist = Infinity;
+    for (const enemy of enemies) {
+      const dist = Math.hypot(enemy.x - entity.x, enemy.y - entity.y);
+      const preferUnits = ['pawn', 'warrior', 'lancer', 'archer', 'monk'].includes(enemy.type) ? -80 : 0;
+      const scoreDist = dist + preferUnits;
+      if (dist <= aggroRange && scoreDist < minDist) {
+        minDist = scoreDist;
+        target = enemy;
+      }
+    }
+
+    if (target) {
+      this.assignAttackTarget([entity.id], target.id, entity.ownerId);
+    }
+  }
+
   getDamageMultiplier(attackerType, defenderType) {
     if (attackerType === 'monk') return 1; // healing
     
@@ -1041,5 +1122,52 @@ export class GameRoom {
       }
     }
     return nearest;
+  }
+
+  getDropoffPoint(building, fromX, fromY) {
+    if (!building) return null;
+
+    const size = building.size || 1;
+    const cells = [];
+    const minX = building.gridX - 1;
+    const maxX = building.gridX + size;
+    const minY = building.gridY - 1;
+    const maxY = building.gridY + size;
+
+    for (let gx = minX; gx <= maxX; gx++) {
+      cells.push({ x: gx, y: minY });
+      cells.push({ x: gx, y: maxY });
+    }
+    for (let gy = building.gridY; gy < building.gridY + size; gy++) {
+      cells.push({ x: minX, y: gy });
+      cells.push({ x: maxX, y: gy });
+    }
+
+    let best = null;
+    let minDist = Infinity;
+    for (const cell of cells) {
+      if (!this.pathfinding.isWalkable(cell.x, cell.y)) continue;
+      const world = this.pathfinding.gridToWorld(cell.x, cell.y);
+      const dist = Math.hypot(world.x - fromX, world.y - fromY);
+      if (dist < minDist) {
+        minDist = dist;
+        best = world;
+      }
+    }
+
+    return best || { x: building.x, y: building.y };
+  }
+
+  isAtDropoff(entity, building) {
+    if (!entity || !building) return false;
+    const size = building.size || 1;
+    const gx = Math.floor(entity.x / CELL_SIZE);
+    const gy = Math.floor(entity.y / CELL_SIZE);
+    const adjacent = gx >= building.gridX - 1
+      && gx <= building.gridX + size
+      && gy >= building.gridY - 1
+      && gy <= building.gridY + size;
+
+    return adjacent || Math.hypot(building.x - entity.x, building.y - entity.y) <= 155;
   }
 }
